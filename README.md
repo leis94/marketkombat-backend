@@ -44,8 +44,8 @@ VsMarket is a web application that compares for you and gives you the cheapest p
 
 ## Contributors ✒️
 
-* **Daniel Silva** - *Backend * - 
-* **Edward Toledo** - *DataScientist* - [fulanitodetal](#fulanito-de-tal)
+* **Daniel Silva** - *Backend * 
+* **Edward Toledo** - *DataScientist* 
 
 ## License 📄
 
