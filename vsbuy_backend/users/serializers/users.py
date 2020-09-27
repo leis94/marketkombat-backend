@@ -14,7 +14,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.validators import UniqueValidator
 
 # Models
-from vsmarket_backend.users.models import User
+from vsbuy_backend.users.models import User
 
 # Utilities
 import jwt

@@ -6,9 +6,9 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 
 #Utilities
-from vsmarket_backend.utils.models import VSmarketModel
+from vsbuy_backend.utils.models import VSbuyModel
 
-class User(VSmarketModel, AbstractUser):
+class User(VSbuyModel, AbstractUser):
     """Users model.
 
     Extend from Django's Abstract User, change the username field to email and add some extra fields.

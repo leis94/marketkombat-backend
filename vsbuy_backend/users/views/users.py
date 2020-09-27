@@ -14,10 +14,10 @@ from rest_framework.permissions import (
     AllowAny,
     IsAuthenticated
 )
-from vsmarket_backend.users.permissions import IsAccountOwner
+from vsbuy_backend.users.permissions import IsAccountOwner
 
 # Serializers
-from vsmarket_backend.users.serializers import (
+from vsbuy_backend.users.serializers import (
     UserModelSerializer,
     UserLoginSerializer,
     UserSignUpSerializer,
@@ -25,7 +25,7 @@ from vsmarket_backend.users.serializers import (
 )
 
 # Models
-from vsmarket_backend.users.models import User
+from vsbuy_backend.users.models import User
 
 class UserViewSet(mixins.RetrieveModelMixin,
                 mixins.UpdateModelMixin,

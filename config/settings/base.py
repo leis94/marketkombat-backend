@@ -3,7 +3,7 @@
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3
-APPS_DIR = ROOT_DIR.path('vsmarket_backend')
+APPS_DIR = ROOT_DIR.path('vsbuy_backend')
 
 env = environ.Env()
 
@@ -50,7 +50,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    'vsmarket_backend.users.apps.UsersAppConfig',
+    'vsbuy_backend.users.apps.UsersAppConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -150,7 +150,7 @@ ADMINS = [
 MANAGERS = ADMINS
 
 # Celery
-INSTALLED_APPS += ['vsmarket_backend.taskapp.celery.CeleryAppConfig']
+INSTALLED_APPS += ['vsbuy_backend.taskapp.celery.CeleryAppConfig']
 if USE_TZ:
     CELERY_TIMEZONE = TIME_ZONE
 CELERY_BROKER_URL = env('CELERY_BROKER_URL')

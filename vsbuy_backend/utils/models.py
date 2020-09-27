@@ -3,7 +3,7 @@
 #Django
 from django.db import models
 
-class VSmarketModel(models.Model):
+class VSbuyModel(models.Model):
     """ Comparte Rdie base model.
 
     CRideModel acts as an abstract base class fro mwhich every other model in the project will inherit.
