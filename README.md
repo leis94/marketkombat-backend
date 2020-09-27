@@ -1,6 +1,6 @@
-# VsMarket
+# VsBuy
 
-VsMarket is a web application that compares for you and gives you the cheapest price of the most famous stores.
+VsBuy is a web application that compares for you and gives you the cheapest price of the most famous stores.
 
 ### Requirements 📋
 
@@ -12,7 +12,7 @@ VsMarket is a web application that compares for you and gives you the cheapest p
 1. Clone this project.
 
 2. Change of directory to the root of the project.
-  cd vsmarket_backend
+  cd vsbuy_backend
 
 3. Build the images.
   docker-compose -f production.yml build
