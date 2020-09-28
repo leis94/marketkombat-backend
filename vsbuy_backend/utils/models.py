@@ -4,10 +4,10 @@
 from django.db import models
 
 class VSbuyModel(models.Model):
-    """ Comparte Rdie base model.
+    """ VSbuyModel base model.
 
-    CRideModel acts as an abstract base class fro mwhich every other model in the project will inherit.
-    This class provides every tabler with the following attributes:
+    VSbuyModel acts as an abstract base class from which every other model in the project will inherit.
+    This class provides every table with the following attributes:
         + created(DateTime): Store the datetime the object was created
         + modified (DateTime): Store the last datetime the objects was modified.
     """
@@ -31,3 +31,4 @@ class VSbuyModel(models.Model):
 
         get_latest_by = 'created'
         ordering = ['-created', '-modified']
+

@@ -51,6 +51,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'vsbuy_backend.users.apps.UsersAppConfig',
+    'vsbuy_backend.products.apps.ProductsAppConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

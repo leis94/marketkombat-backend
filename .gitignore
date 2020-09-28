@@ -156,3 +156,6 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Folders
+vsbuy_backend/media
