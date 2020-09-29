@@ -12,6 +12,8 @@ class ScrapingProduct(VSbuyModel):
     product = models.ForeignKey(
         'products.Product',
         on_delete=models.CASCADE,
+        null=True,
+        blank=True,
         help_text= 'Relationship from which product was scraped'
     )
 
@@ -26,6 +28,8 @@ class ScrapingProduct(VSbuyModel):
     picture = models.ImageField(
         'Store the image of the product scraped',
         upload_to = 'products/pictures/market/',
+        null=True,
+        blank=True,
     )
 
     url = models.URLField()

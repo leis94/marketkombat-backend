@@ -41,3 +41,21 @@ class StoreAdmin(admin.ModelAdmin):
         'is_active',
     )
     ordering = ('id',)
+
+
+@admin.register(ScrapingProduct)
+class ScrapingProductAdmin(admin.ModelAdmin):
+    """ScrapingProduct admin."""
+
+    list_display = (
+        'id',
+        'name',
+        'url',
+        'price',  
+    )
+
+    search_fields = ('id', 'name')
+    list_filter = (
+        'is_active',
+    )
+    ordering = ('id',)
