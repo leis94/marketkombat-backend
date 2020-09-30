@@ -56,6 +56,7 @@ class ScrapingProductAdmin(admin.ModelAdmin):
 
     search_fields = ('id', 'name')
     list_filter = (
+        'product__name',
         'is_active',
     )
     ordering = ('id',)
