@@ -19,8 +19,7 @@ from vsbuy_backend.products.serializers.stores import StoreModelSerializer
 # Models
 from vsbuy_backend.products.models.stores import Store
 
-class StoreViewSet(mixins.CreateModelMixin,
-        mixins.ListModelMixin,
+class StoreViewSet(mixins.ListModelMixin,
         mixins.RetrieveModelMixin,
         viewsets.GenericViewSet):
     """Product view set."""

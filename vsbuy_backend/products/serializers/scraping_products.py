@@ -37,7 +37,7 @@ class CreateScrapingProductSerializer(serializers.Serializer):
     name = serializers.CharField(min_length=2, max_length=255)
     price = serializers.DecimalField(max_digits=19, decimal_places=10)
     url = serializers.URLField(min_length=3)
-    picture = serializers.ImageField(required=False)
+    picture = serializers.URLField(min_length=3, required=False)
     product = serializers.CharField()
     store = serializers.IntegerField(help_text='1 Amazon, 2 MercadoLibre, 3 Ebay')
 

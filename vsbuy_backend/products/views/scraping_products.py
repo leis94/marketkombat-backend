@@ -2,8 +2,8 @@
 from rest_framework import viewsets, mixins, status
 from rest_framework import filters
 from rest_framework.filters import SearchFilter, OrderingFilter
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
+
 
 # Serializers
 from vsbuy_backend.products.serializers.scraping_products import ScrapingProductModelSerializer, CreateScrapingProductSerializer
@@ -25,8 +25,9 @@ class ScrapingProductViewSet(mixins.CreateModelMixin,
 
     ordering = ('price',)
 
+
     def create(self, request, *args, **kwargs):
-        """Handle member creatino from invitation code."""
+        """Handle creation from invitation code."""
         serializer = CreateScrapingProductSerializer(
             data=request.data,
         )

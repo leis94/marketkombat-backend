@@ -13,8 +13,6 @@ class ScrapingProduct(VSbuyModel):
     product = models.ForeignKey(
         'products.Product',
         on_delete=models.CASCADE,
-        null=True,
-        blank=True,
         help_text='Relationship from which product was scraped'
     )
 
@@ -25,23 +23,15 @@ class ScrapingProduct(VSbuyModel):
     )
 
     name = models.CharField(max_length=255)
-
-    picture = models.ImageField(
-        'Store the image of the product scraped',
-        upload_to='products/pictures/market/',
-        null=True,
-        blank=True,
-    )
-
-    url = models.URLField(max_length=300)
-    price = models.DecimalField(max_digits=19, decimal_places=10)
-
-    rank = models.PositiveIntegerField(null=True, blank=True)
-
+    picture = url = models.URLField(max_length=300)
+    url = models.URLField(max_length=300, unique=True)
+    price = models.DecimalField(max_digits=13, decimal_places=2)
+    
     is_active = models.BooleanField(
         default=True,
         help_text='Boolean field to get active a market'
     )
+
 
     def __str__(self):
         """Return Name"""
