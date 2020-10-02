@@ -5,4 +5,4 @@ set -o nounset
 
 
 rm -f './celerybeat.pid'
-celery -A vsmarket_backend.taskapp beat -l INFO
+celery -A vsbuy_backend.taskapp beat -l INFO

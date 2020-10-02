@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 #Models
-from vsmarket_backend.users.models import User
+from vsbuy_backend.users.models import User
 
 class CustomUserAdmin(UserAdmin):
     """User model admin."""

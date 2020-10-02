@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
-    image: vsmarket_local_django
+    image: vsbuy_local_django
     depends_on:
       - postgres
     volumes:
@@ -25,7 +25,7 @@ services:
     build:
       context: .
       dockerfile: ./compose/production/postgres/Dockerfile
-    image: vsmarket_production_postgres
+    image: vsbuy_production_postgres
     volumes:
       - local_postgres_data:/var/lib/postgresql/data
       - local_postgres_data_backups:/backups
@@ -37,7 +37,7 @@ services:
 
   celeryworker:
     <<: *django
-    image: vsmarket_local_celeryworker
+    image: vsbuy_local_celeryworker
     depends_on:
       - redis
       - postgres
@@ -47,7 +47,7 @@ services:
 
   celerybeat:
     <<: *django
-    image: vsmarket_local_celerybeat
+    image: vsbuy_local_celerybeat
     depends_on:
       - redis
       - postgres
@@ -57,7 +57,7 @@ services:
 
   flower:
     <<: *django
-    image: vsmarket_local_flower
+    image: vsbuy_local_flower
     ports:
       - "5555:5555"
     command: /start-flower
