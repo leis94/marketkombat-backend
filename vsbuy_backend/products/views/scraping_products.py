@@ -4,9 +4,13 @@ from rest_framework import filters
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.response import Response
 
+# Permissions
+from rest_framework.permissions import IsAuthenticated
 
 # Serializers
-from vsbuy_backend.products.serializers.scraping_products import ScrapingProductModelSerializer, CreateScrapingProductSerializer
+from vsbuy_backend.products.serializers.scraping_products import (ScrapingProductModelSerializer,
+CreateScrapingProductSerializer,
+ScrapingProductNoUserSerializer,)
 
 # Models
 from vsbuy_backend.products.models.scraping_products import ScrapingProduct
@@ -26,8 +30,16 @@ class ScrapingProductViewSet(mixins.CreateModelMixin,
     ordering = ('price',)
 
 
+    def get_serializer_class(self):
+        if self.request.user.is_anonymous:
+            return ScrapingProductNoUserSerializer
+        else:
+            return ScrapingProductModelSerializer
+
+
     def create(self, request, *args, **kwargs):
         """Handle creation from invitation code."""
+        import pdb; pdb.set_trace()
         serializer = CreateScrapingProductSerializer(
             data=request.data,
         )
@@ -36,3 +48,4 @@ class ScrapingProductViewSet(mixins.CreateModelMixin,
 
         data = self.get_serializer(scrap_product).data
         return Response(data, status=status.HTTP_201_CREATED)
+

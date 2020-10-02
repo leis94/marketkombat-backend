@@ -15,7 +15,7 @@ class Store(VSbuyModel):
 
     logo = models.ImageField(
         'Store logo picture',
-        upload_to = 'poroducts/pictures/market/',
+        upload_to = 'products/pictures/market/',
     )
 
     is_active = models.BooleanField(
