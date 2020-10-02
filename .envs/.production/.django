@@ -1,0 +1,19 @@
+# Django
+DJANGO_SECRET_KEY = co!ahrax@vq^*ew7+_3tdxg0j&)pr+g85gg+s#af5=l6)b-sl**2ja*isk=(uhq!y^l^-aq0r-a3xn!2_rpkk+lk(%5nya7xdi+u
+DJANGO_ADMIN_URL=admin
+DJANGO_SETTINGS_MODULE=config.settings.production
+
+# Mailgun
+MAILGUN_API_KEY=fb10754fcf4b22be8ae450f59b95a25c-cb3791c4-ebd82428
+MAILGUN_DOMAIN=sandbox3f4b061bffb44ffdb538884f2d970c59.mailgun.org
+
+# Redis
+REDIS_URL=redis://redis:6379/0
+
+# Flower
+CELERY_FLOWER_USER=AkSCzUUkrubMopHkMlHHIiFnUzKhIidG
+CELERY_FLOWER_PASSWORD=jspxQGdwrs9VbGLmn5FmXRAGqNt5D6osRgqggNJl1JgcdcCYZdCf7Ch0jcgG0nH7
+
+# AWS
+DJANGO_AWS_STORAGE_BUCKET_NAME=vsbuy
+
