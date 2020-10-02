@@ -7,7 +7,7 @@ from rest_framework import serializers
 from vsbuy_backend.products.models.stores import Store
 
 class StoreModelSerializer(serializers.ModelSerializer):
-    """Product model serializer."""
+    """Store model serializer."""
 
     class Meta:
         """Meta class."""
