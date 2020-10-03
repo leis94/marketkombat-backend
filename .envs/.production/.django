@@ -4,7 +4,7 @@ DJANGO_ADMIN_URL=admin
 DJANGO_SETTINGS_MODULE=config.settings.production
 
 # Mailgun
-MAILGUN_API_KEY=fb10754fcf4b22be8ae450f59b95a25c-cb3791c4-ebd82428
+MAILGUN_API_KEY=key-947f0c400f9a415f5b34692a41c4bc00
 MAILGUN_DOMAIN=sandbox3f4b061bffb44ffdb538884f2d970c59.mailgun.org
 
 # Redis
