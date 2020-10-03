@@ -5,4 +5,4 @@ set -o pipefail
 set -o nounset
 
 
-celery -A vsbuy.taskapp worker -l INFO
+celery -A vsbuy_backend.taskapp worker -l INFO
