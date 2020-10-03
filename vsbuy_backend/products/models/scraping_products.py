@@ -23,7 +23,7 @@ class ScrapingProduct(VSbuyModel):
     )
 
     name = models.CharField(max_length=255)
-    picture = url = models.URLField(max_length=300)
+    picture = models.URLField(max_length=300)
     url = models.URLField(max_length=300, unique=True)
     price = models.DecimalField(max_digits=13, decimal_places=2)
     

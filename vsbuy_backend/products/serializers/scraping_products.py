@@ -15,6 +15,7 @@ class ScrapingProductModelSerializer(serializers.ModelSerializer):
         """Meta class."""
         model = ScrapingProduct
         fields = (
+            'id',
             'name',
             'price',
             'url',
@@ -25,6 +26,7 @@ class ScrapingProductModelSerializer(serializers.ModelSerializer):
         depth = 1
 
         read_only_fields = (
+            'id',
             'name',
             'price',
             'url',
@@ -40,6 +42,7 @@ class ScrapingProductNoUserSerializer(serializers.ModelSerializer):
         """Meta class."""
         model = ScrapingProduct
         fields = (
+            'id',
             'name',
             'price',
             'picture',
@@ -49,6 +52,7 @@ class ScrapingProductNoUserSerializer(serializers.ModelSerializer):
         depth = 1
 
         read_only_fields = (
+            'id',
             'name',
             'price',
             'picture',
