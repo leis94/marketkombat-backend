@@ -5,4 +5,4 @@ set -o pipefail
 set -o nounset
 
 
-celery -A vsbuy.taskapp beat -l INFO
+celery -A vsbuy_backend.taskapp beat -l INFO
