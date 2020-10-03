@@ -11,7 +11,6 @@ from vsbuy_backend.products.models.products import Product
 class ScrapingProductModelSerializer(serializers.ModelSerializer):
     """Scraping Product model serializer."""
 
-
     class Meta:
         """Meta class."""
         model = ScrapingProduct
@@ -22,7 +21,7 @@ class ScrapingProductModelSerializer(serializers.ModelSerializer):
             'picture',
             'store',
         )
-        
+
         depth = 1
 
         read_only_fields = (
@@ -37,7 +36,6 @@ class ScrapingProductModelSerializer(serializers.ModelSerializer):
 class ScrapingProductNoUserSerializer(serializers.ModelSerializer):
     """Scraping Product No login user serializer."""
 
-
     class Meta:
         """Meta class."""
         model = ScrapingProduct
@@ -45,7 +43,7 @@ class ScrapingProductNoUserSerializer(serializers.ModelSerializer):
             'name',
             'price',
             'picture',
-            'store_logo',
+            'store',
         )
 
         depth = 1
@@ -54,9 +52,9 @@ class ScrapingProductNoUserSerializer(serializers.ModelSerializer):
             'name',
             'price',
             'picture',
-            'store_logo',
+            'store',
         )
-    
+
 
 class CreateScrapingProductSerializer(serializers.Serializer):
 
