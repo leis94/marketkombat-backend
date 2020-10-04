@@ -90,6 +90,9 @@ INSTALLED_APPS += ['gunicorn']  # noqa F405
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')  # noqa F405
 
 
+# CORS CONFIGURATION
+CORS_ORIGIN_ALLOW_ALL = True
+
 # Logging
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
