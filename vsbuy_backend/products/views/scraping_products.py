@@ -35,11 +35,11 @@ class ScrapingProductViewSet(mixins.CreateModelMixin,
     ordering = ('price',)
 
 
-    def get_serializer_class(self):
-        if self.request.user.is_anonymous:
-            return ScrapingProductNoUserSerializer
-        else:
-            return ScrapingProductModelSerializer
+    # def get_serializer_class(self):
+    #     if self.request.user.is_anonymous:
+    #         return ScrapingProductNoUserSerializer
+    #     else:
+    #         return ScrapingProductModelSerializer
 
 
     def create(self, request, *args, **kwargs):
