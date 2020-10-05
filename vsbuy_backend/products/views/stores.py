@@ -22,7 +22,7 @@ from vsbuy_backend.products.models.stores import Store
 class StoreViewSet(mixins.ListModelMixin,
         mixins.RetrieveModelMixin,
         viewsets.GenericViewSet):
-    """Product view set."""
+    """Store view set."""
 
     queryset = Store.objects.filter(is_active=True)
     serializer_class = StoreModelSerializer
